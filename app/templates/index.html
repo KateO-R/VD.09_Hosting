@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Кликер!</h1>
-    <p>Количество кликов - {{ current_user.clicks }}</p>
-    <a href="{{url_for('click') }}">Кнопка</a>
+    <div class="container text-center mt-5" style="background-color: #ffe6e6; border-radius: 15px; padding: 20px;">
+        <h1 style="color: #ff4d4d; font-family: 'Cursive', sans-serif;">Кликер!</h1>
+        <p style="color: #b30000; font-size: 18px;">Количество кликов - {{ current_user.clicks }}</p>
+        <a href="{{ url_for('click') }}" class="btn btn-danger" style="background-color: #ff6666; border-color: #ff6666; font-family: 'Cursive', sans-serif;">
+            <i class="fas fa-heart"></i> Кнопка
+        </a>
+    </div>
 {% endblock %}
